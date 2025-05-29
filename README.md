@@ -1,0 +1,1 @@
+I'm learing in The Oding Project. Now I'm trying to make a rock-paper-scissors game on a website by myself with few guidence. Wish I can make it!
