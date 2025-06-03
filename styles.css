@@ -22,6 +22,7 @@ div h1, div span {
 .imgs {
     display: flex;
     width: 60%;
+    max-width:600px;
     margin: 0 auto;
 }
 
@@ -32,6 +33,7 @@ div h1, div span {
 .compare {
     display: flex;
     width: 40%;
+    max-width: 400px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -53,7 +55,7 @@ div h1, div span {
 }
 
 .result span{
-    font-size: 12px;
+    font-size: 18px;
 }
 
 #player-score, #computer-socre {
@@ -63,21 +65,23 @@ div h1, div span {
 
 .finalResult {
     display: flex;
+    width: 80%;
+    max-width:800px;
+    margin: 0 auto;
+    margin-top: 20px;
 }
 
 .win, .loose {
     display: flex;
     width: 50%;
-    height: 300px
 }
 
 .win img, .loose img {
-    width: 120px;
+    width: 70%;
 }
 
 .win p, .loose p {
-    margin-top: 50px;
-    font-size: 8px;
+    font-size: 0.6em;
 }
 
 .win, .loose {
@@ -90,4 +94,8 @@ div h1, div span {
 
 #reset-button {
     display: none;
+}
+
+.reset button {
+    padding: 5px 10px;
 }
