@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
-    <script src="script.js"></script>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Eater&display=swap" rel="stylesheet">
 </head>
@@ -18,19 +17,17 @@
     </div>
 
     <div class="imgs">
-        <img src="img/paper.png">
-        <img src="img/rock.png">
-        <img src="img/scissors.png">
+        <img src="img/paper.png" id="paper">
+        <img src="img/rock.png" id="rock">
+        <img src="img/scissors.png" id="scissors">
     </div>
 
     <div class="compare">
-        <div class="player-move">
-
-
+        <div>
+            <img id="player-move" src="">
         </div>
-        <div class="computer-move">
-
-
+        <div>
+            <img id="computer-move" src="">
         </div>
     </div>
 
@@ -56,8 +53,15 @@
             <div>
                 <img src="img/skeleton-sad.png">
             </div>
-    </div>    
+        </div>    
     </div>
+
+    <div class="reset">
+        <button id="reset-button">Play Again!</button>
+    </div>
+
+
+<script src="script.js"></script>
 
 </body>
 </html>

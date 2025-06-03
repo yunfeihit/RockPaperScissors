@@ -40,10 +40,16 @@ div h1, div span {
 }
 
 
-.player-move, .computer-move {
+.compare div{
+    flex: 1;
+    display: flex;
     min-width: 50%;
     min-height: 120px;
     border: 1px solid white;
+}
+
+.compare div img {
+    max-width: 100%;
 }
 
 .result {
@@ -63,6 +69,7 @@ div h1, div span {
 .win, .loose {
     display: flex;
     width: 50%;
+    height: 300px
 }
 
 .win img, .loose img {
@@ -72,4 +79,16 @@ div h1, div span {
 .win p, .loose p {
     margin-top: 50px;
     font-size: 12px;
+}
+
+.win, .loose {
+    visibility: hidden;
+}
+
+.reset {
+    text-align: center;
+}
+
+#reset-button {
+    display: none;
 }
