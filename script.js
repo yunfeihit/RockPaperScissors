@@ -25,25 +25,32 @@ function getComputerChoice() {
 function compareMove (humanMove, computerMove) {
     if (gameOver) return;//if score reaches 5, just return and dont add score
     if (humanMove == computerMove) {
-        winner = "?"
+        winner = "?";
+        document.querySelector('.compare-words').textContent = "It's a draw!"
     } else if (humanMove == "paper" && computerMove == "rock") {
         humanScore++;
         winner = "Human";
+        document.querySelector('.compare-words').textContent = "you beat the computer!!"
     } else if (humanMove == "paper" && computerMove == "scissors") {
         computerScore++;
         winner = "Computer";
+        document.querySelector('.compare-words').textContent = "computer beat you!!"
     } else if (humanMove == "rock" && computerMove == "paper") {
         computerScore++;
         winner = "Computer";
+        document.querySelector('.compare-words').textContent = "computer beat you!!"
     } else if (humanMove == "rock" && computerMove == "scissors") {
         humanScore++;
         winner = "Human";
+        document.querySelector('.compare-words').textContent = "you beat the computer!!"
     } else if (humanMove == "scissors" && computerMove == "paper") {
         humanScore++;
         winner = "Human";
+        document.querySelector('.compare-words').textContent = "you beat the computer!!"
     } else if (humanMove == "scissors" && computerMove == "rock") {
         computerScore++;
         winner = "Computer";
+        document.querySelector('.compare-words').textContent = "computer beat you!!"
     }
 }
 
@@ -62,15 +69,15 @@ function gameJudge() {
 function playerWin() {
     computerScoreElement.textContent = `${computerScore}`;
     playerScoreElement.textContent = `${humanScore}`;
-    document.querySelector(".win").style.visibility = "visible";
+    document.querySelector(".loose").style.visibility = "visible";
     showResetButton()
 }
 
 //build function of computer-win
 function computerWin() {
-    computerScoreElement.textContent = `${humanScore}`;
-    playerScoreElement.textContent = `${computerScore}`;
-    document.querySelector(".loose").style.visibility = "visible";   
+    computerScoreElement.textContent = `${computerScore}`;
+    playerScoreElement.textContent = `${humanScore}`;
+    document.querySelector(".win").style.visibility = "visible";   
     showResetButton()
 }
 
@@ -91,6 +98,7 @@ function reset() {
     computerImg.src = "";
     playerImg.src = "";
     gameOver = false;
+    document.querySelector('.compare-words').textContent = ' ';
 }
 
 document.getElementById("reset-button").addEventListener("click", reset);
